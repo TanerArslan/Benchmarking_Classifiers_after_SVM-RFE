@@ -16,7 +16,7 @@ from sklearn.utils import safe_sqr
 class ClassifierBenchmark:
     def __init__(self):
         # Load the data
-        self.data = pd.read_csv("/Users/tanerarslan/Desktop/LungCancerPanel/new_search/spike-in-project/new_impute/peptide_new_corr_cls/datas/DIA_peptide_normalized_imputed_high_sd.txt", sep="\t")
+        self.data = pd.read_csv("/Normalized_Mock.txt", sep="\t")
 
     # split the data into training and testing
     def splitData(self, x):
@@ -32,7 +32,8 @@ class ClassifierBenchmark:
         self.y_val = self.y_val.values
 
         return self.X, self.y, self.X_val, self.y_val, self.featureNames
-
+	
+    # Run SVM-RFE and get the 200 most important features
     def svmFC(self, x, step):
         self.step = step
         self.X, self.y, self.X_val, self.y_val, self.featureNames = self.splitData(x = x)
