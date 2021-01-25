@@ -18,4 +18,5 @@ After SVM-RFE optimization and selecting the most important features (peptide-ce
 
 * Bagging 
 
+Test accuracy results can be seen by PDF file.
 
