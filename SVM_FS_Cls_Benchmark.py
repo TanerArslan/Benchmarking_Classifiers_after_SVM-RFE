@@ -269,7 +269,7 @@ class ClassifierBenchmark:
         self.trainingArray = np.empty((0, 10), float)
         self.testingArray = np.empty((0, 10), float)
 
-        for r in range(1) :
+        for r in range(100) :
             self.X, self.y, self.X_val, self.y_val, self.proteins_feature = self.svmFSOutput(x = r)
             self.rftraing, self.rftesting = self.randomForest(x = r)
             self.xgboostTraining, self.xgboostTesting = self.xgboost(x = r)
